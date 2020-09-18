@@ -1,5 +1,6 @@
 package com.gp.service;
 
+import com.gp.exception.ApiRetryException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @Service
 public class RetryTemplateExampleService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(RetryTemplateExampleService.class);
+    private static Logger log = LoggerFactory.getLogger(RetryTemplateExampleService.class);
     private final RetryTemplate retryTemplate;
 
     @Autowired
@@ -27,16 +28,15 @@ public class RetryTemplateExampleService {
             @Override
             public String doWithRetry(RetryContext retryContext) {
                 // do something in this service
-                LOGGER.info(String.format("Retry retryTemplateExample %d", LocalDateTime.now().getSecond()));
-                if (s == "error") {
-                    throw new RuntimeException("Error in ExampleRetryTemplateService.retryTemplateExample ");
+                log.info(String.format("Retry retryTemplateExample %d", LocalDateTime.now().getSecond()));
+                if (s.equals("error")) {
+                    throw new ApiRetryException("Error in process");
                 } else {
                     return "Hi " + s;
                 }
             }
         });
-        LOGGER.info(String.format("Returning %s", result));
+        log.info("Returning {}", result);
         return result;
     }
-
 }

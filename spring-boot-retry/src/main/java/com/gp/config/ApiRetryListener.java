@@ -11,21 +11,33 @@ public class ApiRetryListener extends RetryListenerSupport {
     private static Logger LOGGER = LoggerFactory.getLogger(ApiRetryListener.class);
 
     @Override
-    public <T, E extends Throwable> void close(RetryContext context, RetryCallback<T, E> callback, Throwable throwable) {
-        LOGGER.info("ApiRetryListener.close");
-        super.close(context, callback, throwable);
+    public <T, E extends Throwable> boolean open(RetryContext context, RetryCallback<T, E> callback) {
+        LOGGER.info("ApiRetryListener.open");
+        return super.open(context, callback);
     }
 
     @Override
     public <T, E extends Throwable> void onError(RetryContext context, RetryCallback<T, E> callback, Throwable throwable) {
         LOGGER.info("ApiRetryListener.onError");
-        super.onError(context, callback, throwable);
     }
 
     @Override
-    public <T, E extends Throwable> boolean open(RetryContext context, RetryCallback<T, E> callback) {
-        LOGGER.info("ApiRetryListener.open");
-        return super.open(context, callback);
+    public <T, E extends Throwable> void close(RetryContext context, RetryCallback<T, E> callback, Throwable throwable) {
+        LOGGER.info("ApiRetryListener.close");
+        LOGGER.info("ApiRetryListener.onError isExhausted {}", isExhausted(context));
+    }
+
+
+    private boolean isExhausted(RetryContext context) {
+        return context.hasAttribute(RetryContext.EXHAUSTED);
+    }
+
+    private boolean isClosed(RetryContext context) {
+        return context.hasAttribute(RetryContext.CLOSED);
+    }
+
+    private boolean isRecovered(RetryContext context) {
+        return context.hasAttribute(RetryContext.RECOVERED);
     }
 
 }

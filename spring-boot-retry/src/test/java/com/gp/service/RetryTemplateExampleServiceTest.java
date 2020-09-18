@@ -1,5 +1,6 @@
 package com.gp.service;
 
+import com.gp.exception.ApiRetryException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +15,7 @@ public class RetryTemplateExampleServiceTest {
     @Autowired
     private RetryTemplateExampleService retryTemplateExampleService;
 
-    @Test(expected = RuntimeException.class)
+    @Test(expected = ApiRetryException.class)
     public void retryTemplateExampleShouldThrowRuntime() throws Exception {
         retryTemplateExampleService.retryTemplateExample("error");
     }
