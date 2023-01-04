@@ -14,17 +14,17 @@ public class UserController {
 
     @PostMapping("/api/user/")
     public UserDto create(@RequestBody UserDto user) {
-        return new UserDto();
+        return user;
     }
 
     @PutMapping("/api/user/")
     public UserDto update(@RequestBody UserDto user) {
-        return new UserDto();
+        return user;
     }
 
     @PatchMapping("/api/user/")
     public UserDto change(@RequestBody UserDto user) {
-        return new UserDto();
+        return user;
     }
 
     @DeleteMapping("/api/user/{id}")
