@@ -1,7 +1,7 @@
-# Spring Boot Create Schema and Load Init Data example
+# Spring Boot H2 Configuration example
 
-Example about how to load init data in Spring Boot
+Example about how to configure H2 Database in Spring Boot 
 
-* [Spring Boot Database initialization sql files](https://gustavopeiretti.com/)
+* [Spring Boot H2 Database Config](https://gustavopeiretti.com/spring-boot-h2-database-config/)
 
 
