@@ -2,6 +2,6 @@
 
 Example about how to load init data in Spring Boot
 
-* [Spring Boot Database initialization sql files](https://gustavopeiretti.com/)
+* [Spring Boot Database initialization sql files](https://gustavopeiretti.com/spring-boot-database-initialization-sql-files/)
 
 
