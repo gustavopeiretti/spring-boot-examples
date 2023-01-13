@@ -16,8 +16,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(UserController.class)
 class UserControllerWebMvcTestTest {
 
-    @Autowired
     private MockMvc mockMvc;
+
+    public UserControllerWebMvcTestTest(@Autowired MockMvc mockMvc) {
+        this.mockMvc = mockMvc;
+    }
 
     @Test
     void shouldReturnHelloWorld() throws Exception {
