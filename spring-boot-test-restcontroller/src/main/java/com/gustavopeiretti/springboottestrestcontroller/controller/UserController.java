@@ -18,5 +18,4 @@ public class UserController {
         return new UserDto(1, "MyName", "MySurname");
     }
 
-
 }
