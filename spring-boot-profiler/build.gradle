@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.gustavopeiretti'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+// If you are using Gradle, like this example.
+// You can add these lines to your build.gradle file to send de  VM arguments:
+//bootRun {
+//    jvmArgs = ["-Dspring.profiles.active=prod"]
+//}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
