@@ -1,4 +1,4 @@
-package dev.experto.springbootdocker.controller;
+package com.gustavopeiretti.springbootdocker.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

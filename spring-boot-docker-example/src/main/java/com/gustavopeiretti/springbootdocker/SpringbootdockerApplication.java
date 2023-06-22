@@ -1,4 +1,4 @@
-package dev.experto.springbootdocker;
+package com.gustavopeiretti.springbootdocker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

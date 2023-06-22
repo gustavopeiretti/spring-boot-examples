@@ -1,4 +1,4 @@
-package dev.experto.springbootdocker;
+package com.gustavopeiretti.springbootdocker;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
