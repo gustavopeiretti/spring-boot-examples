@@ -1,4 +1,4 @@
-# Spring Boot H2 Configuration example
+# Spring Boot Rest Error Handling with Controller Advice
 
 Example about Spring Boot Rest Error Handling with Controller Advice
 
