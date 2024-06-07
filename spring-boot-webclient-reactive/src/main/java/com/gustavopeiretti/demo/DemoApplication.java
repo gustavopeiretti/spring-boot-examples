@@ -1,4 +1,4 @@
-package dev.experto.demo;
+package com.gustavopeiretti.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

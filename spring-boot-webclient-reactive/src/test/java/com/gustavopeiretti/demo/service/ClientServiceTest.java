@@ -1,9 +1,9 @@
-package dev.experto.demo.service;
+package com.gustavopeiretti.demo.service;
 
-import dev.experto.demo.exception.ApiWebClientException;
-import dev.experto.demo.model.ClientRequest;
-import dev.experto.demo.model.ClientResponse;
-import dev.experto.demo.webclient.ApiWebClient;
+import com.gustavopeiretti.demo.exception.ApiWebClientException;
+import com.gustavopeiretti.demo.model.ClientRequest;
+import com.gustavopeiretti.demo.model.ClientResponse;
+import com.gustavopeiretti.demo.webclient.ApiWebClient;
 import io.netty.handler.timeout.ReadTimeoutException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

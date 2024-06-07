@@ -7,7 +7,7 @@
         <version>2.1.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>dev.experto</groupId>
+    <groupId>com.gustavopeiretti</groupId>
     <artifactId>springbootdocker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springbootdocker</name>

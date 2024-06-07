@@ -1,15 +1,14 @@
-package dev.experto.demo.model;
+package com.gustavopeiretti.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ClientResponse {
+public class ClientRequest {
 
     @JsonProperty
     private String name;
 
     @JsonProperty
     private String email;
-
 
     public String getName() {
         return name;
@@ -26,6 +25,4 @@ public class ClientResponse {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
 }

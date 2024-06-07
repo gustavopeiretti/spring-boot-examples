@@ -1,8 +1,8 @@
-package dev.experto.demo.webclient;
+package com.gustavopeiretti.demo.webclient;
 
-import dev.experto.demo.exception.ApiWebClientException;
-import dev.experto.demo.model.ClientRequest;
-import dev.experto.demo.model.ClientResponse;
+import com.gustavopeiretti.demo.exception.ApiWebClientException;
+import com.gustavopeiretti.demo.model.ClientRequest;
+import com.gustavopeiretti.demo.model.ClientResponse;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
